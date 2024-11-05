@@ -1,15 +1,28 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
+import company.*;
+
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Employee emily = new Employee("Emily", "Finance", 50000);
+        Manager john = new Manager("John", "IT", 75000, 5);
+        Intern dave = new Intern("Dave", "Marketing", 30000, "State University");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        System.out.println(emily);
+        System.out.println(john);
+        System.out.println(dave);
+
+        SalesPerson lisa = new SalesPerson("Lisa", "Sales", 60000, 120);
+        System.out.println(lisa);
+
+        Engineer danah = new Engineer("danah", "Engineering", 80000);
+        danah.addSkill("Java");
+        danah.addSkill("Python");
+        System.out.println(danah);
+
+
+        Director DaveA = new Director("dave a","dirc",40000,300);
+        System.out.println(DaveA);
+        DaveA.allocateBudget(100);
     }
 }
